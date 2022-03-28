@@ -1,6 +1,13 @@
-import React from 'react';
-import { createStyles, Group, Paper, Text, ThemeIcon, SimpleGrid } from '@mantine/core';
-import { ArrowUpRight, ArrowDownRight } from 'tabler-icons-react';
+import React from "react";
+import {
+  createStyles,
+  Group,
+  Paper,
+  Text,
+  ThemeIcon,
+  SimpleGrid,
+} from "@mantine/core";
+import { ArrowUpRight, ArrowDownRight } from "tabler-icons-react";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -41,7 +48,9 @@ export function StatsGridIcons({ data }: StatsGridIconsProps) {
           <ThemeIcon
             color="gray"
             variant="light"
-            sx={(theme) => ({ color: stat.diff > 0 ? theme.colors.teal[6] : theme.colors.red[6] })}
+            sx={(theme) => ({
+              color: stat.diff > 0 ? theme.colors.teal[6] : theme.colors.red[6],
+            })}
             size={38}
             radius="md"
           >
@@ -49,10 +58,14 @@ export function StatsGridIcons({ data }: StatsGridIconsProps) {
           </ThemeIcon>
         </Group>
         <Text color="dimmed" size="sm" mt="md">
-          <Text component="span" color={stat.diff > 0 ? 'teal' : 'red'} weight={700}>
+          <Text
+            component="span"
+            color={stat.diff > 0 ? "teal" : "red"}
+            weight={700}
+          >
             {stat.diff}%
-          </Text>{' '}
-          {stat.diff > 0 ? 'increase' : 'decrease'} compared to last month
+          </Text>{" "}
+          {stat.diff > 0 ? "increase" : "decrease"} compared to last month
         </Text>
       </Paper>
     );
@@ -60,7 +73,7 @@ export function StatsGridIcons({ data }: StatsGridIconsProps) {
 
   return (
     <div className={classes.root}>
-      <SimpleGrid cols={3} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
+      <SimpleGrid cols={3} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
         {stats}
       </SimpleGrid>
     </div>

@@ -1,18 +1,27 @@
-import React from 'react';
-import { createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper, Title } from '@mantine/core';
-import { Swimming, Calendar } from 'tabler-icons-react';
+import React from "react";
+import {
+  createStyles,
+  ThemeIcon,
+  Progress,
+  Text,
+  Group,
+  Badge,
+  Paper,
+  Title,
+} from "@mantine/core";
+import { Swimming, Calendar } from "tabler-icons-react";
 
 const ICON_SIZE = 60;
 
 const useStyles = createStyles((theme) => ({
   card: {
-    position: 'relative',
-    overflow: 'visible',
+    position: "relative",
+    overflow: "visible",
     padding: 50,
   },
 
   icon: {
-    position: 'absolute',
+    position: "absolute",
     top: -ICON_SIZE / 3,
     left: `calc(50% - ${ICON_SIZE / 2}px)`,
   },
@@ -39,15 +48,15 @@ export function BalanceCard() {
           Previsto
         </Title>
       </Group>
-      <Group position="center" spacing="xl" grow style={{marginTop: 10}}>
+      <Group position="center" spacing="xl" grow style={{ marginTop: 10 }}>
         <Text color="green" align="center" size="sm">
-            R$4.000,00
+          R$4.000,00
         </Text>
         <Text color="green" align="center" size="sm">
-            R$1.200,00
+          R$1.200,00
         </Text>
         <Text color="red" align="center" size="sm">
-            - R$1.200,00
+          - R$1.200,00
         </Text>
       </Group>
     </Paper>
